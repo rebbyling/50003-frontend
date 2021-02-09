@@ -1,0 +1,44 @@
+html {
+  display: inline;
+}
+body {
+  margin: 15px;
+  font-family: "Poppins", "Davis Sans", "Helvetica Neue" sans-serif;
+  color: #4460a9;
+  font-weight: 350;
+  font-size: 3.5vw;
+}
+
+table {
+  border-collapse: collapse;
+  display: block;
+  height: 300px;
+  overflow-y: auto;
+  border-radius: 8px 8px 8px 8px;
+  box-sizing: content-box;
+}
+table td,
+table th {
+  border: 1px solid #ddd;
+  padding-left: 5px;
+  padding-right: 5px;
+  padding-bottom: 5px;
+  padding-top: 5px;
+  width: 60%;
+}
+
+table tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+table tr:hover {
+  background-color: #ddd;
+}
+
+table th {
+  padding-top: 6px;
+  padding-bottom: 6px;
+  text-align: left;
+  background-color: #f0dfd6;
+  font-weight: 550;
+}
