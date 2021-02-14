@@ -3,7 +3,7 @@ html {
 }
 body {
   margin: 15px;
-  font-family: "Poppins", "Davis Sans", "Helvetica Neue" sans-serif;
+  font-family: "Poppins", sans-serif;
   color: #4460a9;
   font-weight: 350;
   font-size: 3.5vw;
@@ -11,11 +11,10 @@ body {
 
 table {
   border-collapse: collapse;
-  display: block;
+  display: inline-block;
   height: 300px;
   overflow-y: auto;
   border-radius: 8px 8px 8px 8px;
-  box-sizing: content-box;
 }
 table td,
 table th {
@@ -24,7 +23,7 @@ table th {
   padding-right: 5px;
   padding-bottom: 5px;
   padding-top: 5px;
-  width: 60%;
+  width: fit-content;
 }
 
 table tr:nth-child(even) {
@@ -41,4 +40,26 @@ table th {
   text-align: left;
   background-color: #f0dfd6;
   font-weight: 550;
+}
+
+.tableContainer {
+  height: 350px;
+}
+
+h1 {
+  margin-bottom: 0%;
+  font-size: 33px;
+  display: block;
+  float: inline-start;
+}
+
+h4 {
+  margin-top: 0%;
+  color: #ff7c5e;
+  display: inline-block;
+  float: initial;
+}
+p.viewDetails {
+  display: block;
+  float: right;
 }

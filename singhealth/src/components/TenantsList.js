@@ -1,7 +1,7 @@
 import React, { useMemo } from "react";
 import { useRowSelect, useTable } from "react-table";
 import TenantData from "./TenantData.json";
-import { COLUMNS } from "./columns";
+import { COLUMNS } from "./TenantDataColumn";
 
 export const TenantsList = () => {
   const columns = useMemo(() => COLUMNS, []);
