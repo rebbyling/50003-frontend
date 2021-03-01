@@ -5,6 +5,9 @@ import reportWebVitals from "./reportWebVitals";
 import { TenantsList } from "./components/TenantsList";
 import { FnbTable } from "./components/fnbTable";
 import Checklist from "./checklist.js";
+import UploadedPhoto from "./UploadPhoto";
+
+import PlusBtn from "./PlusBtn";
 import {
   BrowserRouter as Router,
   Switch,
@@ -26,6 +29,7 @@ function App() {
         <Link to="/Checklist" component={Checklist}>
           Checklist
         </Link>
+        <Link to="/UploadedPhoto" component={UploadedPhoto}></Link>
       </div>
     </BrowserRouter>
   );
