@@ -1,13 +1,10 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
-import reportWebVitals from "./reportWebVitals";
-import { TenantsList } from "./components/TenantsList";
-import { FnbTable } from "./components/fnbTable";
 import Checklist from "./checklist.js";
 import UploadedPhoto from "./UploadPhoto";
-
 import PlusBtn from "./PlusBtn";
+import Navbar from "./components/Navbar/Navbar";
 import {
   BrowserRouter as Router,
   Switch,
@@ -30,6 +27,7 @@ function App() {
           Checklist
         </Link>
         <Link to="/UploadedPhoto" component={UploadedPhoto}></Link>
+        <Navbar />
       </div>
     </BrowserRouter>
   );

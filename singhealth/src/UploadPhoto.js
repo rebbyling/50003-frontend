@@ -2,8 +2,7 @@ import React, { Component } from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
 import gallery from "./assets/galleryIcon.svg";
-import camera from "./assets/cameraIcon.svg";
-import { render } from "@testing-library/react";
+import cameraIcon from "./assets/cameraIcon.svg";
 import GallerySelect from "./SelectFromGalleyPopup";
 
 export default class UploadPhotos extends React.Component {
@@ -16,15 +15,16 @@ export default class UploadPhotos extends React.Component {
       seen: !this.state.seen,
     });
   };
+
   render() {
     return (
       <div className="upload">
-        <div>
-          <img className="uploadPopup" src={camera}></img>
+        {/* <button onClick={this.togglePop}>
+          <img className="uploadPopup" src={cameraIcon}></img>
           <h4 className="uploadPopup">Take Picture with Camera </h4>
-        </div>
-
-        <button onClick={this.togglePop}>
+        </button>
+         */}
+        <button className="Gallery" onClick={this.togglePop}>
           <img
             className="galleryMargin"
             src={gallery}

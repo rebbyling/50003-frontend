@@ -33,7 +33,9 @@ export default class GallerySelect extends React.Component {
       <div className="popup">
         <input type="file" onChange={this.fileSelectedHandler} />
         <img src={this.state.displayFile} />
-        <button onClick={this.fileUploadHandler}>Upload</button>
+        <button className="uploadButton" onClick={this.fileUploadHandler}>
+          Upload
+        </button>
       </div>
     );
   }
