@@ -27,8 +27,8 @@ function App() {
           Checklist
         </Link>
         <Link to="/UploadedPhoto" component={UploadedPhoto}></Link>
-        <Navbar />
       </div>
+      <Navbar />
     </BrowserRouter>
   );
 }
