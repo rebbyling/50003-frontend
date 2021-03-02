@@ -1,17 +1,11 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
-import Checklist from "./checklist.js";
-import UploadedPhoto from "./UploadPhoto";
-import PlusBtn from "./PlusBtn";
 import Navbar from "./components/Navbar/Navbar";
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Link,
-  BrowserRouter,
-} from "react-router-dom";
+import search from "./components/Search/search";
+import avatar from "./avatar";
+import auditCheck from "./auditCheck";
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
 // // If you want to start measuring performance in your app, pass a function
 // // to log results (for example: reportWebVitals(console.log))
@@ -20,24 +14,29 @@ import {
 
 function App() {
   return (
-    <BrowserRouter>
-      <div className="tableContainer">
-        {/* <TenantsList /> */}
+    <Router>
+      {/* <div className="tableContainer">
+        <TenantsList />
         <Link to="/Checklist" component={Checklist}>
           Checklist
         </Link>
         <Link to="/UploadedPhoto" component={UploadedPhoto}></Link>
-      </div>
+      </div> */}
       <Navbar />
-    </BrowserRouter>
+      <Switch>
+        <Route path="/search" component={search} />
+        <Route path="/" exact component={auditCheck} />
+        <Route path="/avatar" component={avatar} />
+      </Switch>
+    </Router>
   );
 }
 
 export default App;
 
 ReactDOM.render(
-  <BrowserRouter>
+  <Router>
     <App />
-  </BrowserRouter>,
+  </Router>,
   document.getElementById("root")
 );

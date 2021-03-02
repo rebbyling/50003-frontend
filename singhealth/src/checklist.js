@@ -1,7 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
-import reportWebVitals from "./reportWebVitals";
 import { FnbTable } from "./components/fnbTable";
 
 // // If you want to start measuring performance in your app, pass a function
