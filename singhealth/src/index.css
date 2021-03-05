@@ -26,10 +26,12 @@ button.Gallery {
 }
 table {
   border-collapse: collapse;
-  display: inline-block;
-  height: 300px;
+  display: block;
   overflow-y: auto;
   border-radius: 8px 8px 8px 8px;
+}
+.height {
+  height: 300px;
 }
 table td,
 table th {

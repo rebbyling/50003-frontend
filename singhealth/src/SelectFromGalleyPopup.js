@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
 import axios from "axios";
-import Resizer from "react-image-file-resizer";
 
 export default class GallerySelect extends React.Component {
   handleClick = () => {
@@ -23,7 +22,7 @@ export default class GallerySelect extends React.Component {
     const fd = new FormData();
     fd.append("image", this.state.selectedFile, this.state.selectedFile.name);
     axios
-      .post("", fd) //use end point of mySQL
+      .post("", fd) //use end point of django
       .then((res) => {
         console.log(res);
       });

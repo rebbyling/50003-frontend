@@ -5,3 +5,39 @@ body {
   font-weight: 350;
   font-size: 3.5vw;
 }
+input {
+  padding-left: 1rem;
+  font-family: "Poppins", sans-serif;
+  color: #ff7c5e;
+  font-weight: 400;
+  font-size: 4vw;
+}
+
+.searchBar {
+  width: 70%;
+  border-radius: 20px;
+  height: 2rem;
+  border-style: solid;
+  border-color: #4460a9;
+  margin-bottom: 1rem;
+}
+.flex {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+}
+::placeholder {
+  color: #86a2e9;
+  font-family: "Poppins", sans-serif;
+}
+
+.searchButton {
+  border-style: solid;
+  border-color: #4460a9;
+  text-decoration: none;
+  background-color: #4460a9;
+  width: 20%;
+  border-radius: 20px;
+  margin-bottom: 1rem;
+}
+

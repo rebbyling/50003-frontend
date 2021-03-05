@@ -66,7 +66,7 @@ export function FnbTable() {
   );
   return (
     <>
-      <table {...getTableProps()}>
+      <table className="height" {...getTableProps()}>
         <thead>
           {headerGroups.map((headerGroup) => (
             <tr {...headerGroup.getHeaderGroupProps()}>
