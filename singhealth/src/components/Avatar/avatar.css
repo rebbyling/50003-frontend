@@ -1,0 +1,15 @@
+h1 {
+  color: rgb(255, 124, 94);
+  margin: 5%;
+}
+.text {
+  display: flex;
+  justify-content: flex-start;
+  margin: 5%;
+}
+h3 {
+  padding-top: 6px;
+  padding-left: 30px;
+  margin: 0;
+  font-weight: 400;
+}

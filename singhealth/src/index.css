@@ -27,6 +27,7 @@ button.Gallery {
 table {
   border-collapse: collapse;
   display: block;
+  height: 600px;
   overflow-y: auto;
   border-radius: 8px 8px 8px 8px;
 }

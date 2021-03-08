@@ -2,6 +2,7 @@ export const COLUMNS = [
   {
     Header: "Tenant Shop",
     accessor: "Tenant Shop",
+    Cell: (e) => <a href={e.value}> {e.value} </a>,
   },
   {
     Header: "Auditor",

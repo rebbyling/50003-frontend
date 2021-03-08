@@ -3,7 +3,7 @@ import ReactDOM from "react-dom";
 import "./index.css";
 import Navbar from "./components/Navbar/Navbar";
 import search from "./components/Search/search";
-import avatar from "./avatar";
+import avatar from "./components/Avatar/avatar";
 import auditCheck from "./auditCheck";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 

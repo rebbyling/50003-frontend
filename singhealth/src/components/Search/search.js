@@ -5,7 +5,7 @@ import SearchBar from "./SearchBar";
 import SearchList from "./SearchList";
 
 import { BrowserRouter as Router } from "react-router-dom";
-import { TenantsList } from "../TenantsList";
+import { TenantsList } from "./TenantsList";
 
 function Search() {
   return (
