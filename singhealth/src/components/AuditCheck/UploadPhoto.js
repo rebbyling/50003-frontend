@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import ReactDOM from "react-dom";
-import "./index.css";
-import gallery from "./assets/galleryIcon.svg";
-import cameraIcon from "./assets/cameraIcon.svg";
+import "./auditCheck.css";
+import gallery from "./galleryIcon.svg";
+import cameraIcon from "./cameraIcon.svg";
 import GallerySelect from "./SelectFromGalleyPopup";
 
 export default class UploadPhotos extends React.Component {

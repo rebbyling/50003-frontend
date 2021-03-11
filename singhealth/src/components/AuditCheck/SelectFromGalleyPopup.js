@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import ReactDOM from "react-dom";
-import "./index.css";
+import "./auditCheck.css";
 import axios from "axios";
 
 export default class GallerySelect extends React.Component {

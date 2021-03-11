@@ -11,11 +11,11 @@ function Avatar() {
       <h1>PROFILE</h1>
       <div className="text">
         <BsBoxArrowRight size={35} />
-        <h3>Log Out</h3>
+        <h3 className="edit">Log Out</h3>
       </div>
       <div className="text">
         <AiOutlineUserAdd size={35} />
-        <h3>Add New Tenant</h3>
+        <h3 className="edit">Add New Tenant</h3>
       </div>
     </>
   );

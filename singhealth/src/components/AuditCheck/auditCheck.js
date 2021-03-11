@@ -1,5 +1,5 @@
 import React from "react";
-import "./index.css";
+import "./auditCheck.css";
 import Checklist from "./checklist.js";
 import UploadedPhoto from "./UploadPhoto";
 

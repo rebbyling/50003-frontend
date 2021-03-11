@@ -4,7 +4,8 @@ import "./index.css";
 import Navbar from "./components/Navbar/Navbar";
 import search from "./components/Search/search";
 import avatar from "./components/Avatar/avatar";
-import auditCheck from "./auditCheck";
+import home from "./components/Home/Home.js";
+import auditCheck from "./components/AuditCheck/auditCheck.js";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
 // // If you want to start measuring performance in your app, pass a function
@@ -25,7 +26,7 @@ function App() {
       <Navbar />
       <Switch>
         <Route path="/search" component={search} />
-        <Route path="/" exact component={auditCheck} />
+        <Route path="/" exact component={home} />
         <Route path="/avatar" component={avatar} />
       </Switch>
     </Router>
