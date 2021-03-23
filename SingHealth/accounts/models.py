@@ -10,13 +10,11 @@ class Staff(models.Model):
     def __str__(self):
         return self.name
 
-
 class Tenant(models.Model):
     STATUS = (
         ('Pending', 'Pending'),
         ('Pass', 'Pass'),
         ('Fail', 'Fail'),
-
     )
     name = models.CharField(max_length=100)
     status = models.CharField(max_length=50, choices=STATUS, blank=True)
@@ -27,7 +25,6 @@ class Tenant(models.Model):
 
     def __str__(self):
         return self.name
-
 
 class Audit(models.Model):
     STATUS = (

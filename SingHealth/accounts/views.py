@@ -18,7 +18,6 @@ def registerPage(request):
     if request.user.is_authenticated:
         return redirect('home')
     else:
-
         form=CreateUserForm()
         if request.method == "POST":
             form = CreateUserForm(request.POST)
@@ -74,7 +73,6 @@ def home(request):
 @login_required(login_url='login')
 def tenants(request):
     tenants = Tenant.objects.all()
-
     return render(request, 'accounts/tenants.html', {'tenants': tenants})
 
 
@@ -120,21 +118,17 @@ def uploadImage(request):
     return render(request, 'accounts/upload_image.html',context)
 
 
-
-
 class tenantchartview(TemplateView):
     #view for tenants graph
     template_name='accounts/chart.html'
     
-    
-
     def get_context_data(self,**kwargs):
         context=super().get_context_data(**kwargs)
         context["qs"]= tenant_score.objects.all()
         ## this qs will be passed into the chart.html template , the model used will be changed with sky's model, this model is empty and does not have any data, hence the graph displays nothing
         ##url link is /chart/
         ##
-        return context 
+        return context
 
 @login_required(login_url='login')
 def export_excel(request):
@@ -164,8 +158,16 @@ def export_excel(request):
 
         for column_number in range(len(row)):
             ws.write(row_num,column_number,str(row[column_number]),font_style)
-
         
     workbook.save(response)
     
     return response
+
+def audit_details(request, pk):
+    tenants = Tenant.objects.get(id=pk)
+    audits = tenants.audit_set.all()
+    context = {
+            'tenants' : tenants,
+            'audits' : audits
+            }
+    return render(request,'accounts/tenantsdetails.html', context)

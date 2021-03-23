@@ -10,7 +10,7 @@
     <a class="" href=""> </a>
     <table class="">
       <tr>
-        <th>Tenant Name</th>
+        <th>Tenant Name :</th>
         <th>Status</th>
         <th>Update</th>
       </tr>
@@ -52,6 +52,7 @@
             <a class="updateButton" href="{% url 'create_audit' %}">Details</a>
           </td>
           {% endif %}
+          {% if i.status in "Pass" %}
         </tr>
         {% endfor %}
       </table>
