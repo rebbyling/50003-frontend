@@ -42,8 +42,6 @@ class Audit(models.Model):
     #upload_file = models.ImageField(null=True,blank=True)
 
 
-
-
 class tenant_score(models.Model):
     #some dummy model to work with the graph , the checklist model should be here instead  
     name=models.CharField(max_length=50)

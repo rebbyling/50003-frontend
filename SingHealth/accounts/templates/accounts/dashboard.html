@@ -24,7 +24,6 @@
         </td>
         {% endif %}
       </tr>
-
       {% endfor %}
     </table>
   </div>
@@ -52,7 +51,6 @@
             <a class="updateButton" href="{% url 'create_audit' %}">Details</a>
           </td>
           {% endif %}
-          {% if i.status in "Pass" %}
         </tr>
         {% endfor %}
       </table>

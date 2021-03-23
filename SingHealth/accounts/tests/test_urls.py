@@ -1,6 +1,6 @@
 from django.test import SimpleTestCase
 from django.urls import reverse, resolve
-from accounts.views import registerPage, loginPage, logoutUser, home, tenants, staff, createAudit, updateAudit #checklist_view
+from accounts.views import registerPage, loginPage, logoutUser, home, tenants, staff, createAudit, updateAudit, audit_details,export_excel, tenantchartview #checklist_view
 
 class TestUrls(SimpleTestCase):
 
@@ -29,12 +29,12 @@ class TestUrls(SimpleTestCase):
         print(resolve(url))
         self.assertEquals(resolve(url).func, tenants)
 
-    """ def test_staff_url_is_resolved(self):
+    def test_staff_url_is_resolved(self):
             #id = 1 (integer) / 2,3,4
-        url = reverse('staff/<str:pk>')
+        url = reverse('staff', args=[1])
         print(resolve(url))
         self.assertEquals(resolve(url).func, staff)
- """
+ 
     def test_createAudit_url_is_resolved(self):
         url = reverse('create_audit')
         print(resolve(url))
@@ -49,6 +49,17 @@ class TestUrls(SimpleTestCase):
         url = reverse('checklist')
         print(resolve(url))
         self.assertEquals(resolve(url).func, checklist_view) """
+    
+    def test_tenantsD_url_is_resolved(self):
+            #id = 1 (integer) / 2,3,4
+        url = reverse('tenantsDetail', args=[1])
+        print(resolve(url))
+        self.assertEquals(resolve(url).func, audit_details)
+
+    def test_chart_url_is_resolved(self):
+        url = reverse('chart')
+        print(resolve(url))
+        self.assertEquals(resolve(url).func.view_class,tenantchartview)
 
 
 
