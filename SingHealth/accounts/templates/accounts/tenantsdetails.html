@@ -20,11 +20,13 @@
         <h4>Status : {{tenants.status}}</h4>
         <h4>Description : {{tenants.description}}</h4>
 
-        <h2>Past Audit Scores</h2>
-        {% include "./chart.html" %}    
-
-        <h2>Tenants</h2>
-
+        
+        {% comment %} {% include "./chart.html" %} {% endcomment %}
+        
+        <h2>Past Audits</h2>
+        <div><a href={% url 'chart' %}>View Graph ></a>
+        <a>Export Graph as Excel ></a></div>
+        
         <table>
             <tr>
                 <th>Date</th>

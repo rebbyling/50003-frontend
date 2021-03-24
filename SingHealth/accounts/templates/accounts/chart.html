@@ -1,9 +1,30 @@
-{% extends 'accounts/base.html' %}
-
-{% block title %} Tenant score {% endblock title %}
+{% load static %} 
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap"
+      rel="stylesheet"
+    />
+  <link rel="stylesheet" href="{% static 'CSS/Navbar.css' %}" />
+  <link rel="stylesheet" href="{% static 'CSS/index.css' %}"  rel="stylesheet" type="text/css"/>
+  
+    <!-- Required meta tags -->
+    {% comment %} <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=yes">
+    <!-- semantic UI -->
+    <link rel="stylesheet" type='text/css' href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.14/semantic.min.css">
+    <!--Chart js--> {% endcomment %}
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js" integrity="sha256-Uv9BNBucvCPipKQ2NS9wYpJmi8DTOEfTA/nH2aoJALw=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.css" integrity="sha256-aa0xaJgmK/X74WM224KMQeNQC2xYKwlAt08oZqjeF0E=" crossorigin="anonymous" />
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script> 
+    <!-- jQuery -->
+  </head>
 
 {% block scripts %}
-
+<body>
+<h2>Past Audit Scores</h2>
 <script>
 $(document).ready(function(){
 var ctx = document.getElementById('myChart').getContext('2d');
@@ -12,7 +33,7 @@ var myChart = new Chart(ctx, {
     data: {
         labels: [{% for items in qs %}'{{items.name}}',{% endfor %}],
         datasets: [{
-            label: '# of Votes',
+            label: 'Score Value',
             data: [{% for items in qs %}'{{items.score}}',{% endfor %}],
             backgroundColor: [
                 'rgba(255, 99, 132, 0.2)',
@@ -47,8 +68,12 @@ var myChart = new Chart(ctx, {
 
 });
 </script>
+
 {% endblock scripts %}
 
 {% block content %} 
-<canvas id="myChart" width="400" height="200"></canvas>
+<canvas id="myChart" class="chartjs-render-monitor" width="400" height="300"></canvas>
 {% endblock content %}
+        {% include 'accounts/navbar.html' %}
+</body>
+</html>
