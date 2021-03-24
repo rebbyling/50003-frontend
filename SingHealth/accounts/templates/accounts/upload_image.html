@@ -1,12 +1,18 @@
 {% extends 'accounts/main.html' %}
+{% load static %}
 {% block content %}
-    <h2>Upload</h2>
+<head>
+<link rel="stylesheet" href="{% static '/CSS/index.css' %}"/>
+  </head>
+<div>
     <form method="post" enctype="multipart/form-data">
     {% csrf_token %}
-    <input type="file" name="document">
-    <button type="submit">Submit</button>
+    <input class="uploadImage" type="file" name="document">
+    <button class="uploadSubmit" type="submit">Upload</button>
     </form>
     {% if url %}
         <p>Uploaded file: <a href="{{ url }}">{{ url }}</a></p>
     {% endif %}
+    </div>
+
 {% endblock %}
