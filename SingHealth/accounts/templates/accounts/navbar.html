@@ -1,4 +1,4 @@
-
+{% load static %} 
 <!DOCTYPE html>
 <html>
   <head>
@@ -13,7 +13,7 @@
   <div class="NavbarItems">
     <ul class="MenuIcon">
       <li class="icon">
-        <a href="">
+        <a href="{% url 'search' %}">
           <img src="{% static 'images/searchIcon.svg' %}" width="100"
         /></a>
       </li>

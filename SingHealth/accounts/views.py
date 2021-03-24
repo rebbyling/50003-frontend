@@ -36,7 +36,6 @@ def loginPage(request):
     if request.user.is_authenticated:
         return redirect('home')
     else:
-
         if request.method == "POST":
             username=request.POST.get('username')
             password=request.POST.get('password')
@@ -120,7 +119,9 @@ def uploadImage(request):
 
     return render(request, 'accounts/upload_image.html',context)
 
-
+def search(request):
+    context = {}
+    return render(request, 'accounts/search.html', context)
 
 
 class tenantchartview(TemplateView):
@@ -170,3 +171,12 @@ def export_excel(request):
     workbook.save(response)
     
     return response
+
+def audit_details(request, pk):
+    tenants = Tenant.objects.get(id=pk)
+    audits = tenants.audit_set.all()
+    context = {
+            'tenants' : tenants,
+            'audits' : audits
+            }
+    return render(request,'accounts/tenantsdetails.html', context)

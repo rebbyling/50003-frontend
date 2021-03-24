@@ -17,7 +17,8 @@ urlpatterns = [
     path('chart/',views.tenantchartview.as_view(),name='chart'),
     path('export_excel/',views.export_excel,name='export_excel'),
     path('upload_image/',views.uploadImage, name='upload_image'),
-    
+    path('search/',views.search, name='search'),
+    path('tenantsD/<str:pk>/',views.audit_details, name='tenantsDetail')
 
 ]
 if settings.DEBUG:
