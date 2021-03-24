@@ -119,9 +119,7 @@ def uploadImage(request):
 
     return render(request, 'accounts/upload_image.html',context)
 
-def search(request):
-    context = {}
-    return render(request, 'accounts/search.html', context)
+
 
 
 class tenantchartview(TemplateView):
@@ -171,12 +169,13 @@ def export_excel(request):
     workbook.save(response)
     
     return response
+@login_required(login_url='login')
+def search_view(request, pk):
+    #search function , need meixuan to change according to the table
+    staff = Staff.objects.get(id=pk)
+    audits = staff.audit_set.all()
+    myFilter = AuditFilter(request.GET, queryset=audits)
+    audits = myFilter.qs
 
-def audit_details(request, pk):
-    tenants = Tenant.objects.get(id=pk)
-    audits = tenants.audit_set.all()
-    context = {
-            'tenants' : tenants,
-            'audits' : audits
-            }
-    return render(request,'accounts/tenantsdetails.html', context)
+    context = { 'audits': audits, 'myFilter': myFilter}
+    return render(request, 'accounts/search.html', context)

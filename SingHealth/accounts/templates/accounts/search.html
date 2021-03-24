@@ -10,24 +10,30 @@
   <body>
     <h1>SEARCH</h1>
     <form method="get">
-      <input class="searchBar" value="{{filter.form}}" />
+      <input class="searchBar" value="{{myFilter.form}}" />
       <button class="searchButton" type="submit">Search</button>
     </form>
     <table>
       <tr>
-        <th>Shop</th>
-        <th>Auditor</th>
-        <th>Date</th>
-        <th>Done</th>
+        <th>Tenant</th>
+				<th>Category</th>
+				<th>Date Audited</th>
+				<th>Status</th>
+				<th>Update</th>
       </tr>
-      {% for t in tenants %}
+      {% for audit in audits %}
       <tr>
-        <td>{{t.Tenant_Shop}}</td>
-        <td>{{t.Auditor}}</td>
-        <td>{{t.date}}</td>
-        <td>{{t.done}}</td>
+          <td>{{ audit.tenant }}</td>
+          <td>{{ audit.tenant.category }}</td>
+          <td>{{ audit.date_audited }}</td>
+          <td>{{ audit.status }}</td>
+          {% if audit.status in "Pending" %}
+          <td><a class="btn btn-sm btn-info" href="{% url 'audits_search' %}">Update</a> </td>
+
+
+          {% endif %}
       </tr>
-      {% endfor %}
+  {% endfor %}
     </table>
 
   </body>

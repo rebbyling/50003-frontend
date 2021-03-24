@@ -18,7 +18,8 @@ urlpatterns = [
     path('export_excel/',views.export_excel,name='export_excel'),
     path('upload_image/',views.uploadImage, name='upload_image'),
     path('search/',views.search, name='search'),
-    path('tenantsD/<str:pk>/',views.audit_details, name='tenantsDetail')
+    path('tenantsD/<str:pk>/',views.audit_details, name='tenantsDetail'),
+    path('search/<str:pk>/',views.search_view,name='audits_search'),
 
 ]
 if settings.DEBUG:
