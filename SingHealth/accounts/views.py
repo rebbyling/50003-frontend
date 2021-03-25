@@ -117,6 +117,10 @@ def uploadImage(request):
 
     return render(request, 'accounts/upload_image.html',context)
 
+def search(request):
+    context = {}
+    return render(request, 'accounts/search.html', context)
+
 
 class tenantchartview(TemplateView):
     #view for tenants graph
@@ -144,14 +148,14 @@ def export_excel(request):
     font_style=xlwt.XFStyle()
     #making the first row bold
 
-    columns=['Name','Status','Category','date_created','description'] ##the header names of the column what should be exported?
+    columns=['Name','Score'] ##the header names of the column what should be exported?
 
     for column_number in range(len(columns)):
         ws.write(row_num,column_number,columns[column_number],font_style )
         #writing the name of the contents into the column header  into the workbook in 135 
     font_style=xlwt.XFStyle()
 
-    rows = Tenant.objects.all().values_list('name','status','category','date_created','description')
+    rows = tenant_score.objects.all().values_list('name','score')
 
     for row in rows:
         row_num+=1

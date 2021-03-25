@@ -8,7 +8,10 @@ pip install django_filter
 python -m pip install Pillow
 pip install django-multiselectfield
 pip install xlwt
+<<<<<<< HEAD
 pip install selenium
+=======
+>>>>>>> 0d58983292247e56adec3f18c22a7846e6078580
 
 #run the server
 python3 manage.py runserver

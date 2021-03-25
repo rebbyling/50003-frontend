@@ -5,31 +5,71 @@ body {
   font-weight: 350;
   font-size: 3.5vw;
 }
-button.uploadButton {
-  background: rgb(255, 124, 94);
-  border: 4px;
-  color: #ffffff;
-  font-weight: 600;
-  border-radius: 27px;
+
+.uploadImage {
+  margin-top: 30px;
   text-align: left;
-  padding: 10px;
+  padding: 30px;
   box-sizing: inherit;
 }
 
 button.Gallery {
-  background: none;
   border: 0ch;
   display: contents;
   text-align: left;
-  padding: 0;
-  box-sizing: inherit;
+  font-family: "Poppins", sans-serif;
+  padding: 3%;
+  color: rgb(255, 124, 94);
+  font-weight: 600;
+  font-size: 2rem;
+  text-decoration: underline;
 }
+
+.flex {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+}
+input {
+  padding-left: 2rem;
+  font-family: "Poppins", sans-serif;
+  color: #ff7c5e;
+  font-weight: 400;
+  font-size: 4vw;
+}
+
+.searchBar {
+  width: 70%;
+  border-radius: 6rem;
+  height: 90px;
+  border-style: solid;
+  border-width: thick;
+  border-color: #4460a9;
+  margin-bottom: 1rem;
+}
+
+.searchButton {
+  border-style: solid;
+  border-color: #4460a9;
+  color: #fff;
+  text-decoration: none;
+  background-color: #4460a9;
+  width: 22%;
+  font-size: 4vw;
+  font-family: "Poppins", sans-serif;
+  margin-top: 0%;
+  border-radius: 4rem;
+  margin-bottom: 0rem;
+  height: 90px;
+}
+
 table {
   border-collapse: collapse;
   display: block;
   height: 600px;
   width: 100%;
   overflow-y: auto;
+  overflow-x: hidden;
   border-radius: 8px 8px 8px 8px;
 }
 .height {
@@ -71,7 +111,7 @@ h1 {
   color: #ff7c5e;
   font-weight: 600;
   display: block;
-  float: inline-start;
+  width: 100%;
 }
 
 h2 {
@@ -89,13 +129,15 @@ h3 {
 }
 
 h4 {
-  margin-top: 0%;
-  font-size: 2.5rem;
+  margin-top: 3%;
   color: #ff7c5e;
-  display: inline-block;
+  display: block;
+  margin-bottom: 0;
+  font-size:30px !important;
+  font-weight: 200 !important;
 }
 a.viewDetails {
-  display: block;
+  margin-top: 50px;
   float: right;
 }
 
@@ -155,6 +197,37 @@ img.plusbtn {
   height: fit-content;
   box-shadow: 0px 0px 20px rgb(168, 168, 168);
 }
-a.updateButton {
+.updateButton {
   color: #ff7c5e;
+}
+
+.uploadSubmit {
+  border-color:#4460a9;
+  border-style: solid;
+  border-width: 8px;
+  padding: 1rem 2rem;
+  margin: 20px;
+  border-radius: 50px;
+  background-color: #ffffff;
+  color: #4460a9;
+}
+
+.centre {
+  display: block;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+ 
+}
+.completeAudit {
+  border-color:#7df0ff;
+  border-style: solid;
+  border-width: 8px;
+  padding: 1rem 2rem;
+  margin-top: 20px;
+  border-radius: 50px;
+  background-color: #7df0ff;
+  color: #4460a9;
+  text-decoration: none;
+  box-shadow: 0px 0px 20px rgb(139, 139, 139);
 }

@@ -1,0 +1,35 @@
+{% extends 'accounts/main.html' %}
+{% load static %} 
+{% block content %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Search</title>
+    
+  </head>
+  <body>
+    <h1>SEARCH</h1>
+    <form method="get">
+      <input class="searchBar" value="{{filter.form}}" />
+      <button class="searchButton" type="submit">Search</button>
+    </form>
+    <table>
+      <tr>
+        <th>Shop</th>
+        <th>Auditor</th>
+        <th>Date</th>
+        <th>Done</th>
+      </tr>
+      {% for t in tenants %}
+      <tr>
+        <td>{{t.Tenant_Shop}}</td>
+        <td>{{t.Auditor}}</td>
+        <td>{{t.date}}</td>
+        <td>{{t.done}}</td>
+      </tr>
+      {% endfor %}
+    </table>
+
+  </body>
+</html>
+{% endblock %}
