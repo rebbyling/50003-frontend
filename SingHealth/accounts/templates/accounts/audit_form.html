@@ -19,6 +19,10 @@
 <h3>Uploaded Photos</h3>
 <div class="padding"> {% include 'accounts/upload_image.html' %}</div>
 <div class="centre">
+<div class="padding"> 
+    {% csrf_token %}
+    {% include 'accounts/display_images.html' %}</div>
+<div class="centre">
 <button class="completeAudit">COMPLETE AUDIT</button>
 </div>
 

@@ -6,7 +6,7 @@ from django.core.files.storage import FileSystemStorage
 
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
-from .forms import AuditForm, CreateUserForm
+from .forms import AuditForm, CreateUserForm, ImageForm
 from .filters import AuditFilter
 from django.contrib.auth.forms import UserCreationForm
 from django.views.generic import TemplateView
@@ -96,6 +96,17 @@ def createAudit(request):
             form.save()
             return redirect('/')
     context = {'form': form}
+
+    if request.method=="POST":
+        upload_file = request.FILES['document']
+        print(upload_file.name)
+        print(upload_file.size)
+        fs = FileSystemStorage()
+        name = fs.save(upload_file.name, upload_file)
+        context['url'] = fs.url(name)
+        image = fs.open(upload_file.name)
+        context['image'] = image
+    
     return render(request, 'accounts/audit_form.html', context)
 
 @login_required(login_url='login')
@@ -108,14 +119,37 @@ def updateAudit(request):
     return render(request, 'accounts/audit_form.html', context)
 
 def uploadImage(request):
-    context={}
+    context = {}
     if request.method=="POST":
         upload_file = request.FILES['document']
+        print(upload_file.name)
+        print(upload_file.size)
         fs = FileSystemStorage()
         name = fs.save(upload_file.name, upload_file)
         context['url'] = fs.url(name)
-
+        image = fs.open(upload_file.name)
+        #code = get_code(name)
+        context['image'] = image
+    
     return render(request, 'accounts/upload_image.html',context)
+
+""" def uploadImage(request): 
+    if request.method == 'POST': 
+        form = ImageForm(request.POST, request.FILES) 
+
+    if form.is_valid(): 
+        form.save() 
+        return redirect('display_images') 
+    else: 
+        form = ImageForm() 
+    return render(request, 'image.html', {'form' : form})  """
+
+
+def display_images(request): 
+    if request.method == 'GET': 
+        # getting all the objects of image
+        image = ImageForm.objects.all()
+        return render(request, 'display_images.html', {'images' : image})
 
 def search(request):
     context = {}

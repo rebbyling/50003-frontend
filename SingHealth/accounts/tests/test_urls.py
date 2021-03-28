@@ -29,21 +29,12 @@ class TestUrls(SimpleTestCase):
         print(resolve(url))
         self.assertEquals(resolve(url).func, tenants)
 
-<<<<<<< HEAD
     def test_staff_url_is_resolved(self):
             #id = 1 (integer) / 2,3,4
         url = reverse('staff', args=[1])
         print(resolve(url))
         self.assertEquals(resolve(url).func, staff)
  
-=======
-    """ def test_staff_url_is_resolved(self):
-            #id = 1 (integer) / 2,3,4
-        url = reverse('staff/<str:pk>')
-        print(resolve(url))
-        self.assertEquals(resolve(url).func, staff)
- """
->>>>>>> 0d58983292247e56adec3f18c22a7846e6078580
     def test_createAudit_url_is_resolved(self):
         url = reverse('create_audit')
         print(resolve(url))

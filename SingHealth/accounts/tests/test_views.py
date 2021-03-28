@@ -47,7 +47,7 @@ class TestViews(TestCase):
 
     def test_registerPage_POST(self):
         response = self.client.get(self.registerPage_url)
-
+        
         self.assertEquals(response.status_code, 200)
         self.assertTemplateUsed(response, 'accounts/register.html')
 

@@ -1,52 +1,4 @@
 {% extends 'accounts/main.html' %}
-<<<<<<< HEAD
-
-{% block content %}
-<h2>Name : {{tenants.name}}</h2>
-<h2>Category : {{tenants.category}}</h2>
-<h2>Date Started : {{tenants.date_created}}</h2>
-<h2>Status : {{tenants.status}}</h2>
-<h2>Description : {{tenants.description}}</h2>
-
-<h2>Chart</h2>
-{% include "./chart.html" %}    
-
-<br>
-    <div class="row">
-        <div class="col-md">
-            <div class="card card-body">
-                <h5>Tenants</h5>
-
-            </div>
-            <div class="card card-body">
-                <table class="table">
-                    <tr>
-                        <th>Date</th>
-                        <th>ID</th>
-                        <th>Conducted By</th>
-                        <th>Score</th>
-                        <th>Comment(Score)</th>
-                        <th>Check</th>
-                    </tr>
-                    {% for i in audits %}
-                        <tr>
-                            <td>{{ i.date_audited }}</td>
-                            <td>{{ i.pk }}</td>
-                            <td>{{ i.staff }}</td>
-                            <td>{{ i.score }}</td>
-                            <td>{{ i.comment }}</td>
-                            <td>
-                                <div style="" class="button-box" >
-                                    <button onclick = "location.href = ' '">Check</button>
-                                </div>
-                            </td>
-                        </tr>
-                    {% endfor %}
-                </table>
-            </div>
-        </div>
-    </div>
-=======
 {% load static %} 
 {% block content %}
 
@@ -101,5 +53,4 @@
         </table>
 </html>
 
->>>>>>> 0d58983292247e56adec3f18c22a7846e6078580
 {% endblock %}
