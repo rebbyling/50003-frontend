@@ -16,10 +16,10 @@
   <body>
   <h1>MAIL TENANT</h1>
   <h4>Let tenants know of Non-Compliance issues</h4>
-  <div style="margin-top:5%">
+  <div >
     <form action="/send_mail_plain_with_file" method="post" enctype="multipart/form-data"> 
         {% csrf_token %}
-        <div class="form-group">
+        <div class="form-group" style="margin-top:5%; ">
             <label class="control-label">
                 Email :
             </label>
@@ -44,16 +44,16 @@
             <input type="file" name="file" class="">
         </div>
 
-        <div class="form-group">
+        <div class="form-group" style="padding-bottom: 30%;">
             <button type="submit" class="uploadSubmit">Send Mail </button>
         </div>
     </form>
     </div>
     <!--send_mail_plain_with_file in form action='/send_mail_plain_with_file' this word will be in the path url-->
-    <div style="margin-top:5%; ">
+    {% comment %} <div style="margin-top:5%; ">
     <form action="/send_plain_mail" method="post">
         {% csrf_token %}
-        <div class="form-group">
+        <div class="form-group " style="margin-top:20%">
             <label class="control-label">
                 Email :
             </label>
@@ -71,11 +71,11 @@
             </label>
             <textarea name="message" class="" rows="5"></textarea>
         </div>
-        <div class="form-group">
+        <div class="form-group" style="padding-bottom: 30%;">
             <button type="submit" class="uploadSubmit">Send Mail</button>
         </div>
     </form>
-     </div>
+     </div> {% endcomment %}
     </body>
     </html>
 
