@@ -8,11 +8,7 @@
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap"
       rel="stylesheet"
-    />
-    <link rel="stylesheet" href="{% static 'CSS/Navbar.css' %}" />
-    <link rel="stylesheet" href="{% static 'CSS/tenant.css' %}" />
-    <link rel="stylesheet" href="{% static 'CSS/index.css' %}"  rel="stylesheet" type="text/css"/>
-  </head>
+    /></head>
 
         <h1>{{tenants.name}}</h1>
         <h4>Category : {{tenants.category}}</h4>
@@ -24,8 +20,8 @@
         {% comment %} {% include "./chart.html" %} {% endcomment %}
         
         <h2>Past Audits</h2>
-        <div><a href={% url 'chart' %}>View Graph ></a>
-        <a href = "{% url 'export_excel' %} " style="float:right">Export Graph as Excel ></a></div>
+        <a href={% url 'chart' %} style="float:left; font-size:2rem">View Graph ></a>
+        <a href = "{% url 'export_excel' %} " style="font-size:2rem; float:right">Export Graph as Excel ></a>
         
         <table>
             <tr>
