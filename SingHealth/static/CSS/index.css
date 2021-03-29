@@ -39,9 +39,9 @@ input {
 }
 
 .searchBar {
-  width: 70%;
+  width: 100%;
   border-radius: 6rem;
-  height: 90px;
+  height: 50px;
   border-style: solid;
   border-width: thick;
   border-color: #4460a9;
@@ -231,3 +231,4 @@ img.plusbtn {
   text-decoration: none;
   box-shadow: 0px 0px 20px rgb(139, 139, 139);
 }
+

@@ -1,0 +1,43 @@
+html {
+    margin:2%
+}
+textarea{
+    display: inline;
+    font-family: "Poppins", sans-serif;
+    color: #ff7c5e;
+    font-weight: 200;
+    width: 100%;
+    min-height: 200px;
+    border-radius: 2rem;
+    border-style: solid;
+    border-width: thick;
+    border-color: #4460a9;
+    margin-bottom: 1rem;
+    padding-left: 2%;
+    margin-right: 2%;
+  }
+.uploadSubmit {
+    border-color:#4460a9;
+    border-style: solid;
+    border-width: 5px;
+    float: right;
+    padding: 1rem 2rem;
+    margin: 20px;
+    border-radius: 50px;
+    background-color: #4460a9;
+    color: #fff;
+    font-size: 2rem;
+    font-family: "Poppins", sans-serif;
+  }
+
+  
+.searchBar {
+    width: 98%;
+    border-radius: 6rem;
+    height: 65px;
+    border-style: solid;
+    border-width: thick;
+    border-color: #4460a9;
+    margin-bottom: 1rem;
+  }
+  
